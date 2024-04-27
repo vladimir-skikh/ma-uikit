@@ -1,39 +1,44 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "jsx": "react-jsx",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "outDir": "dist",
-    "rootDir": ".",
+    "target": "ESNext",
+    "lib": ["dom", "es2015", "esnext"],
+    "outDir": "dist/src",
+    "moduleResolution": "Node",
     "allowJs": false,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "skipDefaultLibCheck": true,
+    "jsx": "react-jsx",
+    "allowUnusedLabels": true,
     "declaration": true,
+    "declarationDir": "dist",
+    "declarationMap": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "allowUnreachableCode": false,
-    "skipLibCheck": true,
-    "baseUrl": "src",
     "paths": {
-      "src/*": ["/*"]
-    }
+      "##/*": ["./src/*"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
   },
-  "include": [
-    "**/*"
-  ],
+  "include": ["src/**/*", "scripts/**/*"],
   "exclude": [
     "node_modules",
-    ".storybook",
     "**/*.stories.*",
     "**/__stories__/**/*"
   ]

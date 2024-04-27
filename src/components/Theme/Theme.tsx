@@ -1,6 +1,6 @@
 import React from 'react';
-import { cn } from '../../utils';
-import { PropsWithHTMLAttributes } from "../../utils";
+import { cn } from '##/utils';
+import { PropsWithHTMLAttributes } from "##/utils";
 
 import './Theme.css';
 
@@ -10,7 +10,7 @@ type ThemeProps = PropsWithHTMLAttributes<Props, HTMLDivElement>;
 
 const cnTheme = cn('MaKitTheme');
 
-const Theme = React.forwardRef<HTMLDivElement, ThemeProps>(
+export const Theme = React.forwardRef<HTMLDivElement, ThemeProps>(
     (props, ref) => {
         const { className, children, ...otherProps } = props;
 
@@ -21,5 +21,3 @@ const Theme = React.forwardRef<HTMLDivElement, ThemeProps>(
         );
     },
 );
-
-export default Theme;

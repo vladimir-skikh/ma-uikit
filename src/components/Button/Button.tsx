@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../../utils";
+import { cn } from "##/utils";
 
 import './Button.css';
 
@@ -22,7 +22,7 @@ type ButtonProps = {
 export const COMPONENT_NAME = 'MaKitButton' as const;
 const cnButton = cn(COMPONENT_NAME);
 
-const Button: React.FC<ButtonProps> = (props) => {
+export const Button: React.FC<ButtonProps> = (props) => {
     const {
         size = 'm',
         label,
@@ -52,6 +52,3 @@ const Button: React.FC<ButtonProps> = (props) => {
         </button>
     )
 }
-
-
-export default Button;
