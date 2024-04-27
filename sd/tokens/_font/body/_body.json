@@ -1,0 +1,30 @@
+{
+  "font": {
+    "body": {
+      "x-large": {
+        "name": "x-large",
+        "path": ["font", "body", "x-large"],
+        "filePath": "sd/tokens/_font/body/x-large.json",
+        "isSource": true
+      },
+      "x-large-strong": {
+        "name": "x-large-strong",
+        "path": ["font", "body", "x-large-strong"],
+        "filePath": "sd/tokens/_font/body/x-large.json",
+        "isSource": true
+      },
+      "large": {
+        "name": "large",
+        "path": ["font", "body", "large"],
+        "filePath": "sd/tokens/_font/body/large.json",
+        "isSource": true
+      },
+      "large-strong": {
+        "name": "large-strong",
+        "path": ["font", "body", "large-strong"],
+        "filePath": "sd/tokens/_font/body/large.json",
+        "isSource": true
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "font": {
+    "family": {
+      "primary": {
+        "value": "'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
+      }
+    },
+    "size": {
+      "bold": {
+        "value": 700
+      },
+      "semibold": {
+        "value": 600
+      },
+      "medium": {
+        "value": 500
+      },
+      "regular": {
+        "value": 400
+      }
+    },
+    "display": {
+      "name": "display",
+      "path": ["font", "display"],
+      "filePath": "sd/tokens/_font/display/display.json",
+      "isSource": true
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "radius": {
+    "0": {
+      "attributes": {
+        "category": "size"
+      },
+      "value": "0"
+    },
+    "1": {
+      "value": "1",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "2": {
+      "value": "2",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "4": {
+      "value": "4",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "6": {
+      "value": "6",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "8": {
+      "value": "8",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "10": {
+      "value": "10",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "12": {
+      "value": "12",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "16": {
+      "value": "16",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "24": {
+      "value": "24",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "32": {
+      "value": "32",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "48": {
+      "value": "48",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "64 ": {
+      "value": "64",
+      "attributes": {
+        "category": "size"
+      }
+    },
+    "full": {
+      "value": "9999",
+      "attributes": {
+        "category": "size"
+      }
+    }
+  }
+}

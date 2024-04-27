@@ -1,0 +1,46 @@
+{
+  "color": {
+    "neutral": {
+      "name": "neutral",
+      "path": ["color", "neutral"],
+      "filePath": "sd/tokens/_color/neutral.json",
+      "isSource": true
+    },
+    "primary": {
+      "name": "primary",
+      "path": ["color", "primary"],
+      "filePath": "sd/tokens/_color/primary.json",
+      "isSource": true
+    },
+    "accent": {
+      "name": "accent",
+      "path": ["color", "accent"],
+      "filePath": "sd/tokens/_color/accent.json",
+      "isSource": true
+    },
+    "link": {
+      "name": "link",
+      "path": ["color", "link"],
+      "filePath": "sd/tokens/_color/link.json",
+      "isSource": true
+    },
+    "success": {
+      "name": "success",
+      "path": ["color", "success"],
+      "filePath": "sd/tokens/_color/success.json",
+      "isSource": true
+    },
+    "warning": {
+      "name": "warning",
+      "path": ["color", "warning"],
+      "filePath": "sd/tokens/_color/warning.json",
+      "isSource": true
+    },
+    "error": {
+      "name": "error",
+      "path": ["color", "error"],
+      "filePath": "sd/tokens/_color/error.json",
+      "isSource": true
+    }
+  }
+}

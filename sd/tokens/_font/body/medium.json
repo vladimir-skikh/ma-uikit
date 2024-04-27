@@ -1,0 +1,46 @@
+{
+  "font": {
+    "body": {
+      "medium": {
+        "weight": {
+          "value": "{font.size.regular.value}"
+        },
+        "size": {
+          "attributes": {
+            "category": "size"
+          },
+          "value": "18"
+        },
+        "line-height": {
+          "attributes": {
+            "category": "size"
+          },
+          "value": "26"
+        },
+        "letter-spacing": {
+          "value": "0%"
+        }
+      },
+      "medium-strong": {
+        "weight": {
+          "value": "{font.size.medium.value}"
+        },
+        "size": {
+          "attributes": {
+            "category": "size"
+          },
+          "value": "{font.body.medium.size.value}"
+        },
+        "line-height": {
+          "attributes": {
+            "category": "size"
+          },
+          "value": "{font.body.medium.line-height.value}"
+        },
+        "letter-spacing": {
+          "value": "{font.body.medium.letter-spacing.value}"
+        }
+      }
+    }
+  }
+}
