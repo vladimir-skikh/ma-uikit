@@ -1,0 +1,16 @@
+.MaKitTheme {
+  --ma-radius-0: 0px;
+  --ma-radius-1: 1px;
+  --ma-radius-2: 2px;
+  --ma-radius-4: 4px;
+  --ma-radius-6: 6px;
+  --ma-radius-8: 8px;
+  --ma-radius-10: 10px;
+  --ma-radius-12: 12px;
+  --ma-radius-16: 16px;
+  --ma-radius-24: 24px;
+  --ma-radius-32: 32px;
+  --ma-radius-48: 48px;
+  --ma-radius-64: 64px;
+  --ma-radius-full: 9999px;
+}

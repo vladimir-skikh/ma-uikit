@@ -1,0 +1,27 @@
+.MaKitTheme {
+  --ma-space-0: 0px;
+  --ma-space-1: 1px;
+  --ma-space-2: 2px;
+  --ma-space-4: 4px;
+  --ma-space-6: 6px;
+  --ma-space-8: 8px;
+  --ma-space-10: 10px;
+  --ma-space-12: 12px;
+  --ma-space-14: 14px;
+  --ma-space-16: 16px;
+  --ma-space-20: 20px;
+  --ma-space-24: 24px;
+  --ma-space-32: 32px;
+  --ma-space-40: 40px;
+  --ma-space-48: 48px;
+  --ma-space-56: 56px;
+  --ma-space-64: 64px;
+  --ma-space-80: 80px;
+  --ma-space-96: 96px;
+  --ma-space-128: 128px;
+  --ma-space-144: 144px;
+  --ma-space-160: 160;
+  --ma-space-192: 192px;
+  --ma-space-224: 224px;
+  --ma-space-256: 256px;
+}

@@ -1,0 +1,73 @@
+.MaKitButton {
+    --button-cursor: pointer;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: var(--button-vertical-pading) var(--button-horizontal-padding);
+    font-family: var(--ma-font-family-primary);
+    font-size: var(--button-font-size);
+    font-weight: var(--ma-font-size-medium);
+    line-height: var(--ma-button-line-height);
+    background-color: var(--button-bg);
+    color: var(--button-font-color);
+    border: none;
+    border-radius: var(--button-border-radius);
+
+    &__size {
+        &_xs {
+            --ma-button-line-height: var(--ma-font-body-x-small-line-height);
+            --button-font-size: var(--ma-font-body-x-small-size);
+            --button-vertical-pading: var(--ma-space-4);
+            --button-horizontal-padding: var(--ma-space-10);
+            --button-border-radius: var(--ma-radius-4);
+        }
+
+        &_s {
+            --ma-button-line-height: var(--ma-font-body-small-line-height);
+            --button-font-size: var(--ma-font-body-small-size);
+            --button-vertical-pading: var(--ma-space-6);
+            --button-horizontal-padding: var(--ma-space-12);
+            --button-border-radius: var(--ma-radius-6);
+        }
+
+        &_m {
+            --ma-button-line-height: var(--ma-font-body-medium-line-height);
+            --button-font-size: var(--ma-font-body-medium-size);
+            --button-vertical-pading: var(--ma-space-10);
+            --button-horizontal-padding: var(--ma-space-16);
+            --button-border-radius: var(--ma-radius-8);
+        }
+
+        &_l {
+            --ma-button-line-height: var(--ma-font-body-large-line-height);
+            --button-font-size: var(--ma-font-body-large-size);
+            --button-vertical-pading: var(--ma-space-12);
+            --button-horizontal-padding: var(--ma-space-20);
+            --button-border-radius: var(--ma-radius-10);
+        }
+
+        &_xl {
+            --ma-button-line-height: var(--ma-font-body-x-large-line-height);
+            --button-font-size: var(--ma-font-body-x-large-size);
+            --button-vertical-pading: var(--ma-space-16);
+            --button-horizontal-padding: var(--ma-space-24);
+            --button-border-radius: var(--ma-radius-12);
+        }
+    }
+
+    &:hover {
+        cursor: var(--button-cursor);
+    }
+
+    &__view {
+        &_primary {
+            --button-bg: var(--ma-color-primary-500);
+            --button-font-color: var(--ma-color-neutral-0);
+        }
+
+        &_neutral {
+            --button-bg: var(--ma-color-neutral-100);
+            --button-font-color: var(--ma-color-neutral-500);
+        }
+    }
+}
