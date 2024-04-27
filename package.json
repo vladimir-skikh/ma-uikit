@@ -1,6 +1,6 @@
 {
   "name": "@vladimir-skikh/ma-uikit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Personalized UI library",
   "files": [
     "*",
@@ -17,15 +17,8 @@
   "types": "./dist/index.d.ts",
   "peerDependencies": {
     "@bem-react/classname": "^1.6.0",
-    "@bem-react/classnames": "^1.3.10",
-    "compute-scroll-into-view": "^1.0.17",
-    "date-fns": "^2.30.0",
     "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0",
-    "react-dropzone": "^14.2.3",
-    "react-imask": "^7.2.1",
-    "react-textarea-autosize": "^8.5.3",
-    "react-transition-group": "^4.4.5"
+    "react-dom": ">= 16.8.0"
   },
   "scripts": {
     "pre-build": "node scripts/preBuild.js --config=scripts/generateReExportsConfig.js",
