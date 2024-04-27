@@ -1,20 +1,14 @@
 {
   "name": "@vladimir-skikh/ma-uikit",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Personalized UI library",
   "files": [
     "*",
     "!**/__stories__"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/vladimir-skikh",
-    "access": "restricted"
+    "registry": "https://npm.pkg.github.com/vladimir-skikh"
   },
-  "exports": {
-    "import": "./dist/__internal__/src/index.js",
-    "default": "./dist/__internal__/src/index.js"
-  },
-  "types": "./dist/index.d.ts",
   "peerDependencies": {
     "@bem-react/classname": "^1.6.0",
     "react": ">= 16.8.0",

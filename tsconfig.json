@@ -22,8 +22,6 @@
     "jsx": "react-jsx",
     "allowUnusedLabels": true,
     "declaration": true,
-    "declarationDir": "dist",
-    "declarationMap": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
