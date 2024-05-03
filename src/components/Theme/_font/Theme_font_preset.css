@@ -1,0 +1,67 @@
+.MaKitTheme {
+    --font-base-family: var(--ma-font-family-primary); /* Базовый шрифт */
+
+    --font-base-weight-regular: var(--ma-font-weight-regular); /* Базовая жирность шрифта regular */
+    --font-base-weight-medium: var(--ma-font-weight-medium); /* Базовая жирность шрифта medium */
+    --font-base-weight-semibold: var(--ma-font-weight-semibold); /* Базовая жирность шрифта semibold */
+    --font-base-weight-bold: var(--ma-font-weight-bold); /* Базовая жирность шрифта bold */
+
+    --font-base-text-size: var(--ma-font-body-medium-size); /* Базовый размер шрифта для текста */
+    --font-base-text-line-height: var(--ma-font-body-medium-line-height); /* Базовый размер строки для текста */
+    --font-base-text-letter-spacing: var(--ma-font-body-medium-letter-spacing); /* Базовый межсимвольнйы интервал для текста */
+
+    --font-base-description-size: var(--ma-font-description-large-size); /* Базовый размер шрифта для описаний */
+    --font-base-description-line-height: var(--ma-font-description-large-line-height); /* Базовый размер строки для описаний */
+    --font-base-description-letter-spacing: var(--ma-font-description-large-letter-spacing); /* Базовый межсимвольный интервал для описаний */
+
+    --font-base-heading-size: var(--ma-font-heading-size); /* Базовый размер шрифта для заголовка */
+    --font-base-heading-line-height: var(--ma-font-heading-line-height); /* Базовый размер строки для заголовка */
+    --font-base-heading-weight: var(--font-base-weight-semibold); /* Базовая жирность шрифта для заголовка */
+
+    /* ---- Основной текст ---- */
+    --font-text-size-xs: calc(var(--font-base-text-size) - 4px);
+    --font-text-size-s: calc(var(--font-base-text-size) - 2px);
+    --font-text-size-m: var(--font-base-text-size);
+    --font-text-size-l: calc(var(--font-base-text-size) + 4px);
+    --font-text-size-xl: calc(var(--font-base-text-size) + 10px);
+
+    --font-text-weight-xs: var(--font-base-weight-regular);
+    --font-text-weight-xs-strong: var(--font-base-weight-medium);
+    --font-text-weight-s: var(--font-base-weight-regular);
+    --font-text-weight-s-strong: var(--font-base-weight-medium);
+    --font-text-weight-m: var(--font-base-weight-regular);
+    --font-text-weight-m-strong: var(--font-base-weight-medium);
+    --font-text-weight-l: var(--font-base-weight-regular);
+    --font-text-weight-l-strong: var(--font-base-weight-medium);
+    --font-text-weight-xl: var(--font-base-weight-regular);
+    --font-text-weight-xl-strong: var(--font-base-weight-medium);
+
+    --font-text-line-height-xs: calc(var(--font-base-text-line-height) - 6px);
+    --font-text-line-height-s: calc(var(--font-base-text-line-height) - 4px);
+    --font-text-line-height-m: var(--font-base-text-line-height);
+    --font-text-line-height-l: calc(var(--font-base-text-line-height) + 6px);
+    --font-text-line-height-xl: calc(var(--font-base-text-line-height) + 10px);
+
+    /* ---- Текст описаний ---- */
+    --font-description-size-s: calc(var(--font-base-text-size) - 2px);
+    --font-description-size-l: var(--font-base-description-size);
+
+    --font-desctiption-weight-s: var(--font-base-weight-regular);
+    --font-desctiption-weight-s-strong: var(--font-base-weight-medium);
+    --font-desctiption-weight-l: var(--font-base-weight-regular);
+    --font-desctiption-weight-l-strong: var(--font-base-weight-medium);
+
+    --font-description-line-height-s: calc(var(--font-base-description-line-height) - 2px);
+    --font-description-line-height-l: var(--font-base-description-line-height);
+
+    --font-description-letter-spacing-s: calc(var(--font-base-description-letter-spacing) + 0.3%);
+    --font-description-letter-spacing-l: var(--font-base-description-letter-spacing);
+
+    /* ---- Текст заголовков ---- */
+    --font-h1-size: var(--font-base-heading-size);
+    --font-h2-size: calc(var(--font-base-heading-size) - 6px);
+    --font-h3-size: calc(var(--font-base-heading-size) - 10px);
+    --font-h4-size: calc(var(--font-base-heading-size) - 12px);
+    --font-h5-size: calc(var(--font-base-heading-size) - 14px);
+    --font-h6-size: calc(var(--font-base-heading-size) - 16px);
+}

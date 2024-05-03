@@ -1,0 +1,95 @@
+.MaKitTheme {
+    --color-base-base: var(--ma-color-neutral-900); /* Базовый цвет содержимого, от которого выстраиваются цвета текста, иконок, ... */
+    --color-base-essential: var(--ma-color-neutral-0); /* Базовый цвет поверхностей */
+    --color-base-project: var(--ma-color-primary-400); /* Проектный цвет, от которого выстраивают акцентные состояния */
+    --color-base-stroke: var(--ma-color-neutral-150); /* Тонирующий цвет, от которого выстраиватся бордеры, оверлей под модальными окнами, ... */
+
+    --color-base-primary: var(--ma-color-primary-500); /* Цвет контролов primary, от которого выстраиваются все их состояния */
+    --color-base-accent: var(--ma-color-accent-500); /* Цвет контролов accent, от которого выстраиваются все их состояния */
+    --color-base-neutral: var(--ma-color-neutral-50); /* Цвет контролов neutral, от которого выстраиваются все их состояния */
+    --color-base-link: var(--ma-color-link-500); /* Цвет ссылок, от которого выстраиваются все их состояния */
+    --color-base-success: var(--ma-color-success-500); /* Цвет успеха */
+    --color-base-warning: var(--ma-color-warning-500); /* Цвет предупреждения */
+    --color-base-error: var(--ma-color-error-500); /* Цвет ошибки */
+
+    /* ---- Цвета фонов ---- */
+    --color-bg-default: hsl(from var(--color-base-essential) h s l); /* Дефолтный цвет */
+    --color-bg-secondary: hsl(from var(--color-base-project) h s calc(l + 0.35)); /* Второстепенный цвет */
+
+    --color-bg-brand: hsl(from var(--color-base-project) h s l); /* Брендовый цвет */
+    --color-bg-brand-secondary: hsl(from var(--color-base-project) h s calc(l + 0.35)); /* Дополнительный брендовый цвет */
+
+    --color-bg-neutral: hsl(from var(--color-base-neutral) h s l); /* Нейтральный цвет */
+    --color-bg-neutral-secondary: hsl(from var(--color-base-neutral) h calc(s - 0.08) calc(l + 0.45)); /* Дополнительный нейтральный цвет */
+
+    --color-bg-success: hsl(from var(--color-base-success) h s l); /* Цвет фона успешный */
+    --color-bg-success-secondary: hsl(from var(--color-base-success) h s calc(l + 0.35)); /* Дополнительный цвет фона успешный */
+
+    --color-bg-warning: hsl(from var(--color-base-warning) h s l); /* Цвет фона предупреждения */
+    --color-bg-warning-secondary: hsl(from var(--color-base-warning) h s calc(l + 0.35)); /* Дополнительный цвет фона предупреждения */
+
+    --color-bg-error: hsl(from var(--color-base-error) h s l); /* Цвет фона ошибки */
+    --color-bg-error-secondary: hsl(from var(--color-base-error) h s calc(l + 0.35)); /* Дополнительный цвет фона ошибки */
+
+    /* ---- Цвета текста ---- */
+    --color-typo-primary: hsl(from var(--color-base-base) h s l); /* Основной цвет текста */
+    --color-typo-secondary: hsl(from var(--color-base-base) h s calc(l + 0.3)); /* Второстепенный цвет текста */
+    --color-typo-ghost: hsl(from var(--color-base-base) h calc(s - 0.08) calc(l + 0.5)); /* Дополнительный цвет текста */
+
+    --color-typo-brand: hsl(from var(--color-base-project) h calc(s + 0.08) calc(l - 0.1)); /* Основной брендовый цвет текста */
+    --color-typo-brand-secondary: hsl(from var(--color-base-essential) h s l); /* Дополнительный брендовый цвет текста */
+
+    --color-typo-success: hsl(from var(--color-base-success) h s l); /* Основной цвет текста успешный */
+    --color-typo-success-secondary: hsl(from var(--color-base-essential) h s l); /* Дополнительный цвет текста успешный */
+
+    --color-typo-warning: hsl(from var(--color-base-warning) h s l); /* Основной цвет текста предупрежедения */
+    --color-typo-warning-secondary: hsl(from var(--color-base-essential) h s l); /* Дополнительный цвет текста предупрежедения */
+
+    --color-typo-error: hsl(from var(--color-base-error) h s l); /* Основной цвет текста ошибки */
+    --color-typo-error-secondary: hsl(from var(--color-base-essential) h s l); /* Дополнительный цвет текста ошибки */
+
+    --color-typo-link: hsl(from var(--color-base-link) h s l); /* Цвет текста ссылки */
+    --color-typo-link-hover: hsl(from var(--color-base-link) h s calc(l + 0.1)); /* Цвет текста ссылки по ховеру */
+
+    /* ---- Цвета скроллбара ---- */
+    --color-scroll-bg: hsl(from var(--color-base-stroke) h s l / 6%);
+    --color-scroll-thumb: hsl(from var(--color-base-stroke) h s l / 24%);
+    --color-scroll-thumb-hover: hsl(from var(--color-base-stroke) h s l / 32%);
+
+    /* ---- Цвета контролов ---- */
+    /* Default */
+    --color-control-bg-default: hsl(from var(--color-base-essential) h s l); /* Цвет фона контрола */
+    --color-control-bg-default-disabled: hsl(from var(--color-base-neutral) h s l); /* Цвет фона контрола при дизейбле */
+    --color-control-bg-border-default: hsl(from var(--color-base-stroke) h s l); /* Цвет фона бордеров котрола */
+    --color-control-bg-border-default-hover: hsl(from var(--color-base-stroke) h s calc(l - 0.05)); /* Цвет фона бордеров контрола по ховеру */
+    --color-control-bg-border-default-focus: hsl(from var(--color-base-primary) h s l); /* Цвет аутлайна контролов при фокусе */
+    --color-control-bg-shadow-focus: hsl(from var(--color-base-primary) h s l / 30%); /* Цвет тени в состонии фокуса */
+    --color-control-bg-shadow-active: hsl(from var(--color-base-primary) h s l / 50%); /* Цвет тени в состонии нажатия  */
+    --color-control-typo-default: hsl(from var(--color-base-base) h s l); /* Цвет основного текста контрола */
+    --color-control-typo-placeholder: hsl(from var(--color-base-base) h s calc(l + 0.3)); /* Цвет плейсхолдера контрола */
+    --color-control-typo-hint: hsl(from var(--color-base-base) h calc(s - 0.08) calc(l + 0.5)); /* Цвет описания контрола */
+
+    /* Primary */
+    --color-control-bg-primary: hsl(from var(--color-base-primary) h s l); /* Цвет фона активного контрола */
+    --color-control-bg-primary-hover: hsl(from var(--color-base-primary) h calc(s - 0.08) calc(l + 0.1)); /* Цвет фона активного контрола по ховеру */
+    --color-control-bg-primary-disabled: hsl(from var(--color-base-primary) h calc(s - 0.08) calc(l + 0.45)); /* Цвет фона активного контрола при дизейбле */
+    --color-control-typo-primary: hsl(from var(--color-base-base) h s calc(l + 1)); /* Цвет акцентного текста */
+    --color-control-typo-primary-hover: hsl(from var(--color-base-base) h s calc(l + 1)); /* Цвет акцентного текста по ховеру */
+    --color-control-typo-primary-disabled: hsl(from var(--color-base-primary) h calc(s - 0.08) calc(l + 0.3)); /* Цвет акцентного текста при дизейбле */
+
+    /* Accent */
+    --color-control-bg-accent: hsl(from var(--color-base-accent) h s l); /* Цвет фона активного контрола */
+    --color-control-bg-accent-hover: hsl(from var(--color-base-accent) h s calc(l + 0.1)); /* Цвет фона активного контрола по ховеру */
+    --color-control-bg-accent-disabled: hsl(from var(--color-base-accent) h s calc(l + 0.35)); /* Цвет фона активного контрола при дизейбле */
+    --color-control-typo-accent: hsl(from var(--color-base-base) h s calc(l + 1)); /* Цвет акцентного текста */
+    --color-control-typo-accent-hover: hsl(from var(--color-base-base) h s calc(l + 1)); /* Цвет акцентного текста по ховеру */
+    --color-control-typo-accent-disabled: hsl(from var(--color-base-accent) h calc(s - 0.08) calc(l + 0.2)); /* Цвет акцентного текста при дизейбле */
+
+    /* Neutral */
+    --color-control-bg-neutral: hsl(from var(--color-base-neutral) h s l); /* Цвет фона активного контрола */
+    --color-control-bg-neutral-hover: hsl(from var(--color-base-neutral) h s calc(l - 0.05)); /* Цвет фона активного контрола по ховеру */
+    --color-control-bg-neutral-disabled: hsl(from var(--color-base-neutral) h s l); /* Цвет фона активного контрола при дизейбле */
+    --color-control-typo-neutral: hsl(from var(--color-base-base) h s calc(l + 0.3)); /* Цвет акцентного текста */
+    --color-control-typo-neutral-hover: hsl(from var(--color-base-base) h s l); /* Цвет акцентного текста по ховеру */
+    --color-control-typo-neutral-disabled: hsl(from var(--color-base-base) h calc(s - 0.08) calc(l + 0.7)); /* Цвет акцентного текста при дизейбле */
+}
