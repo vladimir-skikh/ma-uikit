@@ -5,18 +5,22 @@ import './Button.css';
 
 type ButtonSize = 'xs' | 's' | 'm' | 'l' | 'xl';
 type ButtonView = 'primary' | 'accent' | 'neutral';
+type ButtonForm = 'default' | 'round';
 
 type ButtonProps = {
-    size: ButtonSize,
+    size?: ButtonSize,
+    view?: ButtonView,
+    form?: ButtonForm,
     type?: 'button' | 'reset' | 'submit',
     disabled?: boolean,
     loading?: boolean,
-    label?: string | number,
+    label: string | number,
     title?: string,
-    onClick?: React.EventHandler<React.MouseEvent>,
     children?: never,
     className?: string,
-    view?: ButtonView,
+    outline?: boolean,
+    width?: 'full' | 'default',
+    onClick?: React.EventHandler<React.MouseEvent>,
 }
 
 export const COMPONENT_NAME = 'MaKitButton' as const;
@@ -27,11 +31,14 @@ export const Button: React.FC<ButtonProps> = (props) => {
         size = 'm',
         label,
         onClick,
-        type,
+        type = "button",
         disabled,
         title,
         className,
-        view = 'neutral'
+        view = 'neutral',
+        form  = 'default',
+        outline,
+        width = 'default'
     } = props;
 
     return (
@@ -43,7 +50,11 @@ export const Button: React.FC<ButtonProps> = (props) => {
             className={cnButton(
                 {
                     size,
-                    view
+                    view,
+                    form,
+                    disabled,
+                    outline,
+                    width
                 },
                 [className],
             )}
