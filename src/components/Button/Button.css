@@ -3,11 +3,11 @@
     overflow: hidden;
     box-sizing: border-box;
     max-width: 100%;
-    padding: var(--button-vertical-pading) var(--button-horizontal-padding);
+    padding: var(--button-vertical-padding) var(--button-horizontal-padding);
     border: 1px solid transparent;
     font-family: var(--font-base-family);
-    font-size: var(--button-font-size);
     font-weight: var(--font-text-size-m);
+    font-size: var(--button-font-size);
     line-height: var(--button-line-height);
     background-color: var(--button-bg-color);
     color: var(--button-font-color);
@@ -42,7 +42,7 @@
         &_xs {
             --button-line-height: var(--font-text-line-height-xs);
             --button-font-size: var(--font-text-size-xs);
-            --button-vertical-pading: var(--ma-space-4);
+            --button-vertical-padding: var(--ma-space-4);
             --button-horizontal-padding: var(--ma-space-10);
             --button-border-radius: var(--ma-radius-4);
         }
@@ -50,7 +50,7 @@
         &_s {
             --button-line-height: var(--font-text-line-height-s);
             --button-font-size: var(--font-text-size-s);
-            --button-vertical-pading: var(--ma-space-6);
+            --button-vertical-padding: var(--ma-space-6);
             --button-horizontal-padding: var(--ma-space-12);
             --button-border-radius: var(--ma-radius-6);
         }
@@ -58,7 +58,7 @@
         &_m {
             --button-line-height: var(--font-text-line-height-m);
             --button-font-size: var(--font-text-size-m);
-            --button-vertical-pading: var(--ma-space-8);
+            --button-vertical-padding: var(--ma-space-8);
             --button-horizontal-padding: var(--ma-space-16);
             --button-border-radius: var(--ma-radius-8);
         }
@@ -66,7 +66,7 @@
         &_l {
             --button-line-height: var(--font-text-line-height-l);
             --button-font-size: var(--font-text-size-l);
-            --button-vertical-pading: var(--ma-space-12);
+            --button-vertical-padding: var(--ma-space-12);
             --button-horizontal-padding: var(--ma-space-20);
             --button-border-radius: var(--ma-radius-10);
         }
@@ -74,7 +74,7 @@
         &_xl {
             --button-line-height: var(--font-text-line-height-xl);
             --button-font-size: var(--font-text-size-xl);
-            --button-vertical-pading: var(--ma-space-16);
+            --button-vertical-padding: var(--ma-space-16);
             --button-horizontal-padding: var(--ma-space-24);
             --button-border-radius: var(--ma-radius-12);
         }
