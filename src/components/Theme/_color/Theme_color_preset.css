@@ -20,7 +20,7 @@
     --color-bg-brand-secondary: hsl(from var(--color-base-project) h s calc(l + 0.35)); /* Дополнительный брендовый цвет */
 
     --color-bg-neutral: hsl(from var(--color-base-neutral) h s l); /* Нейтральный цвет */
-    --color-bg-neutral-secondary: hsl(from var(--color-base-neutral) h calc(s - 0.08) calc(l + 0.45)); /* Дополнительный нейтральный цвет */
+    --color-bg-neutral-secondary: hsl(from var(--color-base-neutral) h calc(s + 0.08) calc(l - 0.45)); /* Дополнительный нейтральный цвет */
 
     --color-bg-success: hsl(from var(--color-base-success) h s l); /* Цвет фона успешный */
     --color-bg-success-secondary: hsl(from var(--color-base-success) h s calc(l + 0.35)); /* Дополнительный цвет фона успешный */
@@ -38,6 +38,9 @@
 
     --color-typo-brand: hsl(from var(--color-base-project) h calc(s + 0.08) calc(l - 0.1)); /* Основной брендовый цвет текста */
     --color-typo-brand-secondary: hsl(from var(--color-base-essential) h s l); /* Дополнительный брендовый цвет текста */
+
+    --color-typo-neutral: hsl(from var(--color-base-neutral) h calc(s + 0.08) calc(l - 0.45)); /* Основной цвет текста нейтральный */
+    --color-typo-neutral-secondary: hsl(from var(--color-base-essential) h s l); /* Дополнительный цвет текста нейтральный */
 
     --color-typo-success: hsl(from var(--color-base-success) h s l); /* Основной цвет текста успешный */
     --color-typo-success-secondary: hsl(from var(--color-base-essential) h s l); /* Дополнительный цвет текста успешный */

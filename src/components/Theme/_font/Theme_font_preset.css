@@ -43,13 +43,13 @@
     --font-text-line-height-xl: calc(var(--font-base-text-line-height) + 10px);
 
     /* ---- Текст описаний ---- */
-    --font-description-size-s: calc(var(--font-base-text-size) - 2px);
+    --font-description-size-s: calc(var(--font-base-description-size) - 2px);
     --font-description-size-l: var(--font-base-description-size);
 
-    --font-desctiption-weight-s: var(--font-base-weight-regular);
-    --font-desctiption-weight-s-strong: var(--font-base-weight-medium);
-    --font-desctiption-weight-l: var(--font-base-weight-regular);
-    --font-desctiption-weight-l-strong: var(--font-base-weight-medium);
+    --font-description-weight-s: var(--font-base-weight-regular);
+    --font-description-weight-s-strong: var(--font-base-weight-medium);
+    --font-description-weight-l: var(--font-base-weight-regular);
+    --font-description-weight-l-strong: var(--font-base-weight-medium);
 
     --font-description-line-height-s: calc(var(--font-base-description-line-height) - 2px);
     --font-description-line-height-l: var(--font-base-description-line-height);
