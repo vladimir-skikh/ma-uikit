@@ -1,0 +1,12 @@
+{
+  "font": {
+    "description": {
+      "large": {
+        "name": "large",
+        "path": ["font", "description", "large"],
+        "filePath": "sd/tokens/_font/description/large.json",
+        "isSource": true
+      }
+    }
+  }
+}

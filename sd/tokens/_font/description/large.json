@@ -1,21 +1,21 @@
 {
   "font": {
-    "body": {
-      "medium": {
+    "description": {
+      "large": {
         "size": {
           "attributes": {
             "category": "size"
           },
-          "value": 18
+          "value": 12
         },
         "line-height": {
           "attributes": {
             "category": "size"
           },
-          "value": 26
+          "value": 16
         },
         "letter-spacing": {
-          "value": "0%"
+          "value": "0.1%"
         }
       }
     }

@@ -5,7 +5,7 @@
         "value": "'Inter', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif"
       }
     },
-    "size": {
+    "weight": {
       "bold": {
         "value": 700
       },
@@ -19,10 +19,22 @@
         "value": 400
       }
     },
-    "display": {
+    "heading": {
       "name": "display",
-      "path": ["font", "display"],
-      "filePath": "sd/tokens/_font/display/display.json",
+      "path": ["font", "heading"],
+      "filePath": "sd/tokens/_font/heading/_heading.json",
+      "isSource": true
+    },
+    "body": {
+      "name": "body",
+      "path": ["font", "body"],
+      "filePath": "sd/tokens/_font/body/_body.json",
+      "isSource": true
+    },
+    "description": {
+      "name": "body",
+      "path": ["font", "description"],
+      "filePath": "sd/tokens/_font/description/_description.json",
       "isSource": true
     }
   }

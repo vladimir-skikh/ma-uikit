@@ -1,0 +1,21 @@
+{
+  "font": {
+    "heading": {
+      "size": {
+        "value": 28,
+        "attributes": {
+          "category": "size"
+        }
+      },
+      "line-height": {
+        "attributes": {
+          "category": "size"
+        },
+        "value": 32
+      },
+      "letter-spacing": {
+        "value": "0%"
+      }
+    }
+  }
+}
