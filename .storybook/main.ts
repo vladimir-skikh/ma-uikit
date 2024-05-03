@@ -58,11 +58,6 @@ const config: StorybookConfig = {
             },
         ];
 
-        console.log({
-            name: 'webpackFinal',
-            value: config.module.rules
-        });
-
         config.resolve.alias = {
             ...config.resolve.alias,
             '##': path.resolve(__dirname, "../src"),

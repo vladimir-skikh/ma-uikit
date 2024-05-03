@@ -1,0 +1,6 @@
+.MaKitTheme {
+    width: min(500px, 70vw);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
