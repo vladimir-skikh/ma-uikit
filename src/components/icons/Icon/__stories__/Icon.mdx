@@ -1,0 +1,100 @@
+import { Meta, IconGallery, IconItem, Source, Subheading, Canvas, Controls, Title, Story } from '@storybook/blocks';
+
+import {
+  IconArrowsChevronDown,
+  IconArrowsChevronLeft,
+  IconArrowsChevronUp,
+  IconArrowsChevronRight,
+  IconArrowsLeft,
+  IconArrowsRight,
+  IconArrowsSwitchHorizontal,
+  IconArrowsRefund,
+  IconArrowsExchange,
+  IconArrowsUp,
+  IconGeneralCross02
+} from "../../../icons";
+import * as IconStories from "./Icon.stories";
+import { Theme } from "../../../Theme";
+
+<Meta of={IconStories} />
+
+# Иконки
+
+<Canvas
+  source={{
+    transform: (code, context) => {
+      const { size, view } = context.args;
+      return `
+<IconArrowsLeft
+  size="${size}"
+  view="${view}"
+/>
+      `
+    }
+  }}
+/>
+
+<Subheading>
+  Импорт
+</Subheading>
+
+<Source code={`
+import { IconArrowsLeft } from '@actr-front/ma-uikit/icons'
+`} />
+
+<Subheading>
+  Параметры
+</Subheading>
+
+<Controls />
+
+<Title>
+  Набор иконок
+</Title>
+
+<Theme>
+  <Subheading>
+    IconArrows
+  </Subheading>
+  <IconGallery>
+    <IconItem name="ChevronDown">
+      <IconArrowsChevronDown />
+    </IconItem>
+    <IconItem name="ChevronUp">
+      <IconArrowsChevronUp />
+    </IconItem>
+    <IconItem name="ChevronLeft">
+      <IconArrowsChevronLeft />
+    </IconItem>
+    <IconItem name="ChevronRight">
+      <IconArrowsChevronRight />
+    </IconItem>
+    <IconItem name="Left">
+      <IconArrowsLeft />
+    </IconItem>
+    <IconItem name="Right">
+      <IconArrowsRight />
+    </IconItem>
+    <IconItem name="Up">
+      <IconArrowsUp />
+    </IconItem>
+    <IconItem name="SwitchHorizontal">
+      <IconArrowsSwitchHorizontal />
+    </IconItem>
+    <IconItem name="Refund">
+      <IconArrowsRefund />
+    </IconItem>
+    <IconItem name="Exchange">
+      <IconArrowsExchange />
+    </IconItem>
+  </IconGallery>
+
+  <Subheading>
+    IconGeneral
+  </Subheading>
+  <IconGallery>
+    <IconItem name="Cross02">
+      <IconGeneralCross02 />
+    </IconItem>
+  </IconGallery>
+</Theme>
