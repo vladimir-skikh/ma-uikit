@@ -1,6 +1,6 @@
 import { withNaming } from '@bem-react/classname';
 
-const reactBemNaming = { e: '-', m: '__', v: '_' };
+const reactBemNaming = { e: '--', m: '__', v: '_' };
 
 export const cn = withNaming(reactBemNaming);
 
