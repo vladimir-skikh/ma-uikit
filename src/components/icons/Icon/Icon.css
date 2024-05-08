@@ -1,0 +1,58 @@
+.MaKitIcon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--icon-size);
+    height: var(--icon-size);
+
+    & path {
+        fill: var(--icon-stroke-color);
+    }
+
+    &__size {
+        &_xs {
+            --icon-size: var(--ma-space-16);
+        }
+        &_s {
+            --icon-size: var(--ma-space-20);
+        }
+        &_m {
+            --icon-size: var(--ma-space-24);
+        }
+        &_l {
+            --icon-size: var(--ma-space-32);
+        }
+    }
+
+    &__view {
+        &_neutral {
+            --icon-stroke-color: var(--color-bg-neutral);
+        }
+        &_primary {
+            --icon-stroke-color: var(--color-control-bg-primary);
+        }
+        &_accent {
+            --icon-stroke-color: var(--color-control-bg-accent);
+        }
+        &_brand {
+            --icon-stroke-color: var(--color-bg-brand);
+        }
+        &_success {
+            --icon-stroke-color: var(--color-bg-success);
+        }
+        &_warning {
+            --icon-stroke-color: var(--color-bg-warning);
+        }
+        &_error {
+            --icon-stroke-color: var(--color-bg-error);
+        }
+        &_disabled {
+            --icon-stroke-color: var(--color-typo-disabled);
+        }
+    }
+
+    &--Svg {
+        width: 100%;
+        height: 100%;
+    }
+}
