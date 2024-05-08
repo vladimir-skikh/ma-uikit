@@ -1,0 +1,64 @@
+import { Canvas, Controls, Meta, Source, Title, Subtitle, Subheading, Story } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+import { Button } from '../Button';
+
+<Meta of={ButtonStories} />
+
+<Title>
+  Кнопка
+</Title>
+
+<Subtitle>
+  Кнопка. Разные формы, цвета и размеры.
+</Subtitle>
+
+<Canvas>
+  <Story name="Button">
+    {(args, context) => (
+      <Button
+        label={args.label}
+        size={args.size}
+        view={args.view}
+        form={args.form}
+        outline={args.outline}
+        disabled={args.disabled}
+        loading={args.loading}
+        title={args.title}
+        width={args.width}
+        onClick={args.onClick}
+      />
+    )}
+  </Story>
+</Canvas>
+
+<Subheading>
+  Импорт
+</Subheading>
+
+<Source code={`import { Button } from @actr-front/ma-uikit/Button;`} />
+
+<Subheading>
+  Параметры
+</Subheading>
+
+<Controls/>
+
+<Subheading>
+  Подключение иконок
+</Subheading>
+
+<Source code={`
+import { Button } from @actr-front/ma-uikit/Button;
+import { IconArrowsChevronUp, IconArrowsChevronDown } from @actr-front/ma-uikit/icons;
+
+<Button
+  label="Кнопка"
+  iconLeft={IconArrowsChevronUp}
+  iconRight={IconArrowsChevronDown}
+/>
+`} />
+
+
+Кнопка используется, когда человеку нужно сделать выбор, подтвердить или совершить какое-то действие. Например, отправить сообщение, оплатить заказ, сохранить изменения, войти в аккаунт.
+
+Кнопка в фокусе визуально выделяется, чтобы человек понимал, что вот-вот нажмёт на неё, и что-то произойдёт.
