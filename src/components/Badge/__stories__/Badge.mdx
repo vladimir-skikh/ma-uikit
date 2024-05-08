@@ -1,0 +1,34 @@
+import { Canvas, Controls, Meta, Source, Title, Subtitle, Subheading, Story } from '@storybook/blocks';
+import * as BadgeStories from './Badge.stories';
+import { Badge } from '../Badge';
+
+<Meta of={BadgeStories} />
+
+<Title>
+  Бейдж
+</Title>
+
+<Subtitle>
+  Бейдж. Разные формы, цвета и размеры.
+</Subtitle>
+
+<Canvas>
+  <Story name="Badge">
+    {(props, context) => (
+      <Badge {...props}/>
+    )}
+  </Story>
+</Canvas>
+
+<Subheading>
+  Импорт
+</Subheading>
+
+<Source code={`import { Badge } from @actr-front/ma-uikit/Badge;`} />
+
+<Subheading>
+  Параметры
+</Subheading>
+
+<Controls/>
+
