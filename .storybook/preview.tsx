@@ -4,8 +4,6 @@ import React from "react";
 import type {Preview} from "@storybook/react";
 import { Theme } from "../src/components/Theme";
 
-import "./preview.css";
-
 const preview: Preview = {
     parameters: {
         options: {
