@@ -1,5 +1,3 @@
-import React from 'react';
-
 import type {Meta, StoryObj} from "@storybook/react";
 import {IconArrowsLeft as IconComponent} from '../../';
 import {IconProps, iconSizes, iconViews} from '../helpers';
