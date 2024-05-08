@@ -14,19 +14,8 @@ import { Button } from '../Button';
 
 <Canvas>
   <Story name="Button">
-    {(args, context) => (
-      <Button
-        label={args.label}
-        size={args.size}
-        view={args.view}
-        form={args.form}
-        outline={args.outline}
-        disabled={args.disabled}
-        loading={args.loading}
-        title={args.title}
-        width={args.width}
-        onClick={args.onClick}
-      />
+    {(props, context) => (
+      <Button {...props}/>
     )}
   </Story>
 </Canvas>

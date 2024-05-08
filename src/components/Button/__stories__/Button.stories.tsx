@@ -50,7 +50,6 @@ export const Example: Story = {
         onlyIcon: false,
         width: 'default',
         onClick: fn(),
-        as: 'button',
     },
     argTypes: {
         label: {
