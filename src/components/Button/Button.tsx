@@ -1,65 +1,153 @@
-import React from "react";
-import { cn } from "##/utils";
+import React, {useRef} from "react";
+import {cn, forwardRefWithAs} from "##/utils";
 
 import './Button.css';
+import {Loader, LoaderVariant} from "##/components/Loader";
+import {IconComponent, IconSize} from "##/components/icons/Icon/helpers";
+import {useForkRef} from "##/hooks";
 
-type ButtonSize = 'xs' | 's' | 'm' | 'l' | 'xl';
-type ButtonView = 'primary' | 'accent' | 'neutral';
-type ButtonForm = 'default' | 'round';
+export const buttonSizes = ['xs', 's', 'm', 'l', 'xl'] as const;
+export const buttonViews = ['primary', 'accent', 'neutral'] as const;
+export const buttonForms = ['brick', 'round'] as const;
+export const buttonWidths = ['default', 'full'] as const;
 
-type ButtonProps = {
+type ButtonSize = typeof buttonSizes[number];
+type ButtonView = typeof buttonViews[number];
+type ButtonForm = typeof buttonForms[number];
+type ButtonWidth = typeof buttonWidths[number];
+
+export type ButtonProps = {
+    label: string | number,
     size?: ButtonSize,
     view?: ButtonView,
     form?: ButtonForm,
     type?: 'button' | 'reset' | 'submit',
     disabled?: boolean,
     loading?: boolean,
-    label: string | number,
     title?: string,
     children?: never,
     className?: string,
     outline?: boolean,
-    width?: 'full' | 'default',
-    onClick?: React.EventHandler<React.MouseEvent>,
+    width?: ButtonWidth,
+    onClick?: React.EventHandler<React.MouseEvent<HTMLButtonElement>>,
+    iconLeft?: IconComponent,
+    iconRight?: IconComponent,
+    onlyIcon?: boolean,
 }
 
 export const COMPONENT_NAME = 'MaKitButton' as const;
 const cnButton = cn(COMPONENT_NAME);
 
-export const Button: React.FC<ButtonProps> = (props) => {
+const loaderVariantMap: Record<ButtonView, Record<LoaderVariant, LoaderVariant>> = {
+    primary: {
+        primary: 'primary',
+        secondary: 'secondary',
+    },
+    accent: {
+        primary: 'primary',
+        secondary: 'secondary',
+    },
+    neutral: {
+        primary: 'secondary',
+        secondary: 'secondary',
+    },
+}
+
+const iconSizeMap: Record<ButtonSize, IconSize> = {
+    xs: 'xs',
+    s: 's',
+    m: 'm',
+    l: 'm',
+    xl: 'l',
+}
+
+export const Button = forwardRefWithAs<ButtonProps, 'button'>((props, ref) => {
+    const buttonRef = useRef<HTMLButtonElement | null>(null);
+
     const {
+        as = 'button',
         size = 'm',
         label,
         onClick,
         type = "button",
         disabled,
+        loading,
         title,
         className,
         view = 'neutral',
-        form  = 'default',
+        form = 'brick',
         outline,
-        width = 'default'
+        width = 'default',
+        iconLeft,
+        iconRight,
+        onlyIcon,
+        tabIndex,
+        ...otherProps
     } = props;
 
+    const Tag = as as string;
+    const IconOnly = (!label || onlyIcon) && (iconLeft || iconRight);
+    const IconLeft = iconLeft;
+    const IconRight = iconRight;
+
     return (
-        <button
+        <Tag
+            {...otherProps}
+            ref={useForkRef([ref, buttonRef])}
             onClick={onClick}
             type={type}
             disabled={disabled}
             title={title}
+            tabIndex={tabIndex}
             className={cnButton(
                 {
                     size,
                     view,
                     form,
                     disabled,
+                    loading,
                     outline,
-                    width
+                    width,
+                    onlyIcon: !!IconOnly,
                 },
                 [className],
             )}
         >
-            {label}
-        </button>
-    )
-}
+            {IconOnly && (
+                <IconOnly
+                    className={cnButton('Icon')}
+                    size={iconSizeMap[size]}
+                />
+            )}
+            {!IconOnly && (
+                (IconLeft || IconRight) && label ? (
+                    <>
+                        {IconLeft && (
+                            <IconLeft
+                                className={cnButton('Icon')}
+                                size={iconSizeMap[size]}
+                            />
+                        )}
+                        <span className={cnButton('Label')}>{label}</span>
+                        {IconRight && (
+                            <IconRight
+                                className={cnButton('Icon')}
+                                size={iconSizeMap[size]}
+                            />
+                        )}
+                    </>
+                ) : (
+                    label
+                )
+            )}
+            {loading && (
+                <Loader
+                    size={size}
+                    view={view}
+                    variant={!outline ? loaderVariantMap[view]['primary'] : loaderVariantMap[view]['secondary']}
+                    className={cnButton('Loader')}
+                />
+            )}
+        </Tag>
+    );
+});

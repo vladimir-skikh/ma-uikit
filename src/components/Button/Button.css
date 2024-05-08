@@ -1,14 +1,24 @@
 .MaKitButton {
     --button-cursor: pointer;
+    --button-transition-time-color: 0.15s;
+    --button-gap: 6px;
+    --button-icon-color: var(--button-font-color);
+
+    position: relative;
     overflow: hidden;
     box-sizing: border-box;
     max-width: 100%;
-    padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--button-gap);
+    height: var(--button-height);
+    padding: 0 var(--button-horizontal-padding);
     border: 1px solid transparent;
     font-family: var(--font-base-family);
     font-weight: var(--font-text-size-m);
     font-size: var(--button-font-size);
-    line-height: var(--button-line-height);
+    line-height: var(--button-height);
     background-color: var(--button-bg-color);
     color: var(--button-font-color);
     white-space: nowrap;
@@ -18,7 +28,7 @@
         background-color 0.15s ease,
         border-color 0.15s ease,
         box-shadow 0.15s ease,
-        color 0.15s ease,
+        color var(--button-transition-time-color) ease,
         fill 0.15s ease;
     flex-shrink: 0;
     -webkit-appearance: none;
@@ -26,106 +36,150 @@
 
     &:hover {
         cursor: var(--button-cursor);
-        color: var(--button-font-color-hover);
-        background-color: var(--button-bg-color-hover);
+
+        &:not(:disabled) {
+            color: var(--button-font-color-hover);
+            background-color: var(--button-bg-color-hover);
+            --button-icon-color: var(--button-font-color-hover);
+        }
+    }
+
+    &:focus {
+        cursor: var(--button-cursor);
+
+        &:not(:disabled) {
+            color: var(--button-font-color-focus);
+            background-color: var(--button-bg-color-focus);
+            outline: none;
+            --button-icon-color: var(--button-font-color-focus);
+        }
     }
 
     &:disabled {
         --button-cursor: not-allowed;
-        --button-font-color-hover: var(--button-font-color-disabled);
         --button-bg-color-hover: var(--button-bg-color-disabled);
+        --button-icon-color: var(--button-font-color-disabled);
+
         color: var(--button-font-color-disabled);
         background-color: var(--button-bg-color-disabled);
     }
 
     &__size {
         &_xs {
-            --button-line-height: var(--font-text-line-height-xs);
+            --button-height: var(--ma-space-24);
             --button-font-size: var(--font-text-size-xs);
-            --button-vertical-padding: var(--ma-space-4);
             --button-horizontal-padding: var(--ma-space-10);
             --button-border-radius: var(--ma-radius-4);
+            --button-gap: 4px;
         }
 
         &_s {
-            --button-line-height: var(--font-text-line-height-s);
+            --button-height: var(--ma-space-32);
             --button-font-size: var(--font-text-size-s);
-            --button-vertical-padding: var(--ma-space-6);
             --button-horizontal-padding: var(--ma-space-12);
             --button-border-radius: var(--ma-radius-6);
         }
 
         &_m {
-            --button-line-height: var(--font-text-line-height-m);
+            --button-height: var(--ma-space-40);
             --button-font-size: var(--font-text-size-m);
-            --button-vertical-padding: var(--ma-space-8);
             --button-horizontal-padding: var(--ma-space-16);
             --button-border-radius: var(--ma-radius-8);
         }
 
         &_l {
-            --button-line-height: var(--font-text-line-height-l);
+            --button-height: var(--ma-space-48);
             --button-font-size: var(--font-text-size-l);
-            --button-vertical-padding: var(--ma-space-12);
             --button-horizontal-padding: var(--ma-space-20);
             --button-border-radius: var(--ma-radius-10);
+            --button-gap: 8px;
         }
 
         &_xl {
-            --button-line-height: var(--font-text-line-height-xl);
+            --button-height: var(--ma-space-64);
             --button-font-size: var(--font-text-size-xl);
-            --button-vertical-padding: var(--ma-space-16);
             --button-horizontal-padding: var(--ma-space-24);
             --button-border-radius: var(--ma-radius-12);
+            --button-gap: 8px;
         }
     }
 
     &__view {
         &_neutral {
+            /* Стили для текста */
             --button-font-color: var(--color-control-typo-neutral);
             --button-font-color-hover: var(--color-control-typo-neutral-hover);
+            --button-font-color-focus: var(--color-control-typo-neutral-hover);
             --button-font-color-disabled: var(--color-control-typo-neutral-disabled);
+
+            /* Стили для фона */
             --button-bg-color: var(--color-control-bg-neutral);
             --button-bg-color-hover: var(--color-control-bg-neutral-hover);
+            --button-bg-color-focus: var(--color-control-bg-neutral-focus);
             --button-bg-color-disabled: var(--color-control-bg-neutral-disabled);
 
+            /* Стили для outline версии */
             --button-font-color-outline: var(--color-control-typo-neutral);
+            --button-font-color-outline-hover: var(--color-control-typo-neutral-hover);
+            --button-font-color-outline-focus: var(--color-control-typo-neutral-hover);
             --button-bg-color-ouline-hover: var(--color-control-bg-neutral-disabled);
-            --button-border-color: var(--color-control-bg-border-default);
+            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-neutral-disabled) h s calc(l - 0.05));
+            --button-border-color: var(--color-control-border);
+            --button-border-color-focus: var(--button-bg-color-ouline-focus);
             --button-border-color-disabled: var(--color-control-typo-neutral-disabled);
         }
 
         &_primary {
+            /* Стили для текста */
             --button-font-color: var(--color-control-typo-primary);
             --button-font-color-hover: var(--color-control-typo-primary-hover);
+            --button-font-color-focus: var(--color-control-typo-primary);
             --button-font-color-disabled: var(--color-control-typo-primary-disabled);
+
+            /* Стили для фона */
             --button-bg-color: var(--color-control-bg-primary);
             --button-bg-color-hover: var(--color-control-bg-primary-hover);
+            --button-bg-color-focus: var(--color-control-bg-primary-focus);
             --button-bg-color-disabled: var(--color-control-bg-primary-disabled);
 
+            /* Стили для outline версии */
             --button-font-color-outline: var(--color-control-bg-primary);
+            --button-font-color-outline-hover: var(--color-control-bg-primary);
+            --button-font-color-outline-focus: var(--color-control-bg-primary-focus);
             --button-bg-color-ouline-hover: var(--color-control-bg-primary-disabled);
+            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-primary-disabled) h s calc(l - 0.05));
             --button-border-color: var(--color-control-bg-primary);
+            --button-border-color-focus: var(--color-control-bg-primary-focus);
             --button-border-color-disabled: var(--color-control-typo-primary-disabled);
         }
 
         &_accent {
+            /* Стили для текста */
             --button-font-color: var(--color-control-typo-accent);
             --button-font-color-hover: var(--color-control-typo-accent-hover);
+            --button-font-color-focus: var(--color-control-typo-accent);
             --button-font-color-disabled: var(--color-control-typo-accent-disabled);
+
+            /* Стили для фона */
             --button-bg-color: var(--color-control-bg-accent);
             --button-bg-color-hover: var(--color-control-bg-accent-hover);
+            --button-bg-color-focus: var(--color-control-bg-accent-focus);
             --button-bg-color-disabled: var(--color-control-bg-accent-disabled);
 
+            /* Стили для outline версии */
             --button-font-color-outline: var(--color-control-bg-accent);
+            --button-font-color-outline-hover: var(--color-control-bg-accent);
+            --button-font-color-outline-focus: var(--color-control-bg-accent-focus);
             --button-bg-color-ouline-hover: var(--color-control-bg-accent-disabled);
+            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-accent-disabled) h s calc(l - 0.05));
             --button-border-color: var(--color-control-bg-accent);
+            --button-border-color-focus: var(--color-control-bg-accent-focus);
             --button-border-color-disabled: var(--color-control-typo-accent-disabled);
         }
     }
 
     &__form {
-        &_default {
+        &_brick {
             border-radius: var(--button-border-radius);
         }
 
@@ -135,22 +189,74 @@
     }
 
     &__outline {
-        --button-bg-color: var(--color-control-bg-default);
+        --button-bg-color: var(--color-control-bg);
         --button-bg-color-hover: var(--button-bg-color-ouline-hover);
+        --button-bg-color-focus: var(--button-bg-color-ouline-focus);
+        --button-bg-color-disabled: var(--color-control-bg);
+
         --button-font-color: var(--button-font-color-outline);
-        --button-font-color-hover: var(--button-font-color-outline);
-        --button-bg-color-disabled: var(--color-control-bg-default);
+        --button-font-color-hover: var(--button-font-color-outline-hover);
+        --button-font-color-focus: var(--button-font-color-outline-focus);
 
         border: 1px solid var(--button-border-color);
 
         &:disabled {
             border-color: var(--button-border-color-disabled);
         }
+
+        &:focus {
+            &:not(:disabled) {
+                border-color: var(--button-border-color-focus);
+            }
+        }
+    }
+
+    &__onlyIcon {
+        padding: 0;
+        width: var(--button-height);
     }
 
     &__width {
         &_full {
             width: 100%;
         }
+    }
+
+    &__loading {
+        --button-cursor: wait;
+        --button-font-color: transparent;
+        --button-font-color-hover: transparent;
+        --button-font-color-focus: transparent;
+        --button-font-color-disabled: transparent;
+        --button-icon-color: transparent;
+        --button-transition-time-color: 0s;
+
+        &:disabled {
+            --button-cursor: not-allowed;
+        }
+    }
+
+    &--Icon.MaKitIcon {
+        display: flex;
+        flex-shrink: 0;
+
+        & path {
+            fill: var(--button-icon-color);
+            transition: stroke var(--button-transition-time-color) ease;
+        }
+    }
+
+    &--Label {
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    &--Loader {
+        position: absolute;
+        top: calc(50% - var(--loader-size) / 2);
+        left: calc(50% - var(--loader-size) / 2);
     }
 }
