@@ -40,6 +40,14 @@ import {
   IconGeneralTable,
   IconGeneralSettings01,
   IconGeneralBell01,
+  IconTravelPlane,
+  IconTravelPassengers,
+  IconFilesFile01,
+  IconFilesFile02,
+  IconFilesFileDown01,
+  IconFilesFilePlus01,
+  IconFilesFileUp01,
+  IconFilesFileX01
 } from "../../../icons";
 import * as IconStories from "./Icon.stories";
 import { Theme } from "../../../Theme";
@@ -66,7 +74,8 @@ import { Theme } from "../../../Theme";
   Импорт
 </Subheading>
 
-<Source code={`
+<Source
+  code={`
 import { IconArrowsLeft } from '@actr-front/ma-uikit/icons'
 `} />
 
@@ -207,6 +216,42 @@ import { IconArrowsLeft } from '@actr-front/ma-uikit/icons'
     </IconItem>
     <IconItem name="Bell01">
       <IconGeneralBell01 />
+    </IconItem>
+  </IconGallery>
+
+  <Subheading>
+    IconTravel
+  </Subheading>
+  <IconGallery>
+    <IconItem name="Plane">
+      <IconTravelPlane />
+    </IconItem>
+    <IconItem name="Passengers">
+      <IconTravelPassengers />
+    </IconItem>
+  </IconGallery>
+
+  <Subheading>
+    IconFiles
+  </Subheading>
+  <IconGallery>
+    <IconItem name="File01">
+      <IconFilesFile01 />
+    </IconItem>
+    <IconItem name="File02">
+      <IconFilesFile02 />
+    </IconItem>
+    <IconItem name="FileUp01">
+      <IconFilesFileUp01 />
+    </IconItem>
+    <IconItem name="FileDown01">
+      <IconFilesFileDown01 />
+    </IconItem>
+    <IconItem name="FilePlus01">
+      <IconFilesFilePlus01 />
+    </IconItem>
+    <IconItem name="FileX01">
+      <IconFilesFileX01 />
     </IconItem>
   </IconGallery>
 </Theme>
