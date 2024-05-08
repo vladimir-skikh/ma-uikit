@@ -1,0 +1,77 @@
+.MaKitLoader {
+    display: inline-block;
+    width: var(--loader-size);
+    height: var(--loader-size);
+    box-sizing: border-box;
+    animation: rotate 1s linear infinite;
+    transform-origin: center;
+
+    & path:first-child {
+        fill: var(--loader-color-small-line);
+    }
+    & path:last-child {
+        fill: var(--loader-color-big-line);
+    }
+
+    &__variant {
+        &_secondary {
+            & path:first-child {
+                fill: var(--loader-color-big-line);
+            }
+            & path:last-child {
+                fill: var(--loader-color-small-line);
+            }
+        }
+    }
+
+    &__size {
+        &_xs {
+            --loader-size: var(--ma-space-12);
+        }
+        &_s {
+            --loader-size: var(--ma-space-16);
+        }
+        &_m {
+            --loader-size: var(--ma-space-20);
+        }
+        &_l {
+            --loader-size: var(--ma-space-24);
+        }
+        &_xl {
+            --loader-size: var(--ma-space-32);
+        }
+    }
+
+    &__view {
+        &_primary {
+            --loader-color-small-line: var(--color-bg-brand);
+            --loader-color-big-line: var(--color-bg-brand-secondary);
+        }
+
+        &_accent {
+            --loader-color-small-line: var(--color-bg-accent);
+            --loader-color-big-line: var(--color-bg-accent-secondary);
+        }
+
+        &_neutral {
+            --loader-color-small-line: var(--color-bg-neutral);
+            --loader-color-big-line: var(--color-base-stroke);
+        }
+
+    }
+
+    &--Svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
