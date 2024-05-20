@@ -1,0 +1,116 @@
+.MaKitCheckbox {
+    --checkbox-size: var(--ma-space-14);
+    --checkbox-gap: var(--ma-space-6);
+    --checkbox-border-color: var(--color-control-border);
+    --checkbox-border-size: var(--ma-space-1);
+    --checkbox-bg-color: var(--color-control-bg);
+    --checkbox-cursor: pointer;
+    --checkbox-border-color-disabled: var(--color-control-bg-disabled);
+    --checkbox-bg-color-disabled: var(--color-control-bg);
+    --checkbox-label-color: var(--color-typo-primary);
+    --checkbox-hint-color: var(--color-typo-secondary);
+    --checkbox-top-position: 0;
+    --checkbox-y-position: 0;
+
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: var(--font-base-family);
+    font-weight: var(--font-text-size-m);
+    display: flex;
+    flex-direction: column;
+    padding-left: calc(var(--checkbox-size) + var(--checkbox-gap));
+
+    &:hover {
+        cursor: var(--checkbox-cursor);
+        --checkbox-border-color: var(--color-control-border-focus);
+    }
+
+    &:focus-within {
+        --checkbox-border-color: var(--color-control-border-focus);
+    }
+
+    &__checked,
+    &__intermediate {
+        --checkbox-bg-color: var(--color-control-bg-primary);
+        --checkbox-border-color: var(--color-control-border-focus);
+        --checkbox-border-color-disabled: var(--color-control-bg-primary-disabled);
+        --checkbox-bg-color-disabled: var(--color-control-bg-primary-disabled);
+
+        &:hover {
+            --checkbox-border-color: var(--color-bg-brand);
+            --checkbox-bg-color: var(--color-bg-brand);
+        }
+    }
+
+    &__disabled {
+        --checkbox-cursor: not-allowed;
+        --checkbox-border-color: var(--checkbox-border-color-disabled);
+        --checkbox-bg-color: var(--checkbox-bg-color-disabled);
+        --checkbox-label-color: var(--color-typo-disabled);
+        --checkbox-hint-color: var(--color-typo-disabled);
+
+        &:hover {
+            --checkbox-border-color: var(--checkbox-border-color-disabled);
+            --checkbox-bg-color: var(--checkbox-bg-color-disabled);
+        }
+    }
+
+    &__align {
+        &_center {
+            --checkbox-top-position: 50%;
+            --checkbox-y-position: -50%;
+        }
+    }
+
+    &--Input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: -1;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--CustomInput {
+        position: absolute;
+        top: var(--checkbox-top-position);
+        left: 0;
+        transform: translateY(var(--checkbox-y-position));
+        width: var(--checkbox-size);
+        height: var(--checkbox-size);
+        border-width: var(--checkbox-border-size);
+        border-style: solid;
+        border-color: var(--checkbox-border-color);
+        background-color: var(--checkbox-bg-color);
+        border-radius: var(--ma-space-4);
+
+        transition:
+                background-color 0.15s ease,
+                border-color 0.15s ease;
+    }
+
+    &--Label {
+        color: var(--checkbox-label-color);
+        font-size: var(--font-control-size-label-m);
+        line-height: var(--font-control-line-height-label-m);
+    }
+
+    &--Hint {
+        color: var(--checkbox-hint-color);
+        font-size: var(--font-control-size-hint-s);
+        line-height: var(--font-control-line-height-hint-s);
+    }
+
+    &--Icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
