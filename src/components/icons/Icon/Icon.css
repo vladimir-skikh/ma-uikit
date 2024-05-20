@@ -49,6 +49,9 @@
         &_disabled {
             --icon-stroke-color: var(--color-typo-disabled);
         }
+        &_clear {
+            --icon-stroke-color: var(--color-typo-clear);
+        }
     }
 
     &--Svg {

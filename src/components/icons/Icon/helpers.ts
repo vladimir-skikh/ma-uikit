@@ -13,6 +13,7 @@ export const iconViews = [
     'warning',
     'error',
     'disabled',
+    'clear',
 ] as const;
 
 export type IconSize = typeof iconSizes[number];
