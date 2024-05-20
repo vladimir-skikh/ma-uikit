@@ -64,4 +64,29 @@
     --font-h4-size: calc(var(--font-base-heading-size) - 12px);
     --font-h5-size: calc(var(--font-base-heading-size) - 14px);
     --font-h6-size: calc(var(--font-base-heading-size) - 16px);
+
+    /* ---- Текст контролов ---- */
+    --font-control-size-value-s: calc(var(--font-base-text-size) - 6px);
+    --font-control-size-value-m: calc(var(--font-base-text-size) - 4px);
+    --font-control-size-value-l: calc(var(--font-base-text-size) - 2px);
+
+    --font-control-size-label-s: calc(var(--font-base-text-size) - 8px);
+    --font-control-size-label-m: calc(var(--font-base-text-size) - 6px);
+    --font-control-size-label-l: calc(var(--font-base-text-size) - 2px);
+
+    --font-control-size-hint-s: calc(var(--font-base-text-size) - 8px);
+    --font-control-size-hint-m: calc(var(--font-base-text-size) - 6px);
+    --font-control-size-hint-l: calc(var(--font-base-text-size) - 6px);
+
+    --font-control-line-height-value-s: calc(var(--ma-font-body-medium-line-height) - 10px);
+    --font-control-line-height-value-m: calc(var(--ma-font-body-medium-line-height) - 6px);
+    --font-control-line-height-value-l: calc(var(--ma-font-body-medium-line-height) - 4px);
+
+    --font-control-line-height-label-s: calc(var(--ma-font-body-medium-line-height) - 12px);
+    --font-control-line-height-label-m: calc(var(--ma-font-body-medium-line-height) - 10px);
+    --font-control-line-height-label-l: calc(var(--ma-font-body-medium-line-height) - 4px);
+
+    --font-control-line-height-hint-s: calc(var(--ma-font-body-medium-line-height) - 12px);
+    --font-control-line-height-hint-m: calc(var(--ma-font-body-medium-line-height) - 10px);
+    --font-control-line-height-hint-l: calc(var(--ma-font-body-medium-line-height) - 10px);
 }
