@@ -1,0 +1,34 @@
+import { Canvas, Controls, Meta, Source, Title, Subtitle, Subheading, Story } from '@storybook/blocks';
+import * as CheckboxStories from './Checkbox.stories';
+import { Checkbox } from '../Checkbox';
+
+<Meta of={CheckboxStories} />
+
+<Title>
+  Бейдж
+</Title>
+
+<Subtitle>
+  Бейдж. Разные формы, цвета и размеры.
+</Subtitle>
+
+<Canvas>
+  <Story name="Checkbox">
+    {(props, context) => (
+      <Checkbox {...props}/>
+    )}
+  </Story>
+</Canvas>
+
+<Subheading>
+  Импорт
+</Subheading>
+
+<Source code={`import { Checkbox } from @actr-front/ma-uikit/Checkbox;`} />
+
+<Subheading>
+  Параметры
+</Subheading>
+
+<Controls/>
+
