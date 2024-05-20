@@ -13,7 +13,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<ComponentWithAs<BadgeProps>>;
 
-export const Badge: Story = {
+export const Example: Story = {
     args: {
         label: 'Статус',
         size: 's',
