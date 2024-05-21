@@ -2,7 +2,7 @@ import React, {useRef} from "react";
 import {cn, forwardRefWithAs} from "##/utils";
 
 import './Button.css';
-import {Loader, LoaderVariant} from "##/components/Loader";
+import {Loader, LoaderSize, LoaderVariant} from "##/components/Loader";
 import {IconComponent, IconSize} from "##/components/icons/Icon/helpers";
 import {useForkRef} from "##/hooks";
 
@@ -40,17 +40,25 @@ const cnButton = cn(COMPONENT_NAME);
 
 const loaderVariantMap: Record<ButtonView, Record<LoaderVariant, LoaderVariant>> = {
     primary: {
-        primary: 'primary',
-        secondary: 'secondary',
+        primary: 'secondary',
+        secondary: 'primary',
     },
     accent: {
-        primary: 'primary',
-        secondary: 'secondary',
+        primary: 'secondary',
+        secondary: 'primary',
     },
     neutral: {
-        primary: 'secondary',
-        secondary: 'secondary',
+        primary: 'primary',
+        secondary: 'primary',
     },
+}
+
+const loaderSizeMap: Record<ButtonSize, LoaderSize> = {
+    xs: 'xs',
+    s: 's',
+    m: 's',
+    l: 'm',
+    xl: 'l',
 }
 
 const iconSizeMap: Record<ButtonSize, IconSize> = {
@@ -142,7 +150,7 @@ export const Button = forwardRefWithAs<ButtonProps, 'button'>((props, ref) => {
             )}
             {loading && (
                 <Loader
-                    size={size}
+                    size={loaderSizeMap[size]}
                     view={view}
                     variant={!outline ? loaderVariantMap[view]['primary'] : loaderVariantMap[view]['secondary']}
                     className={cnButton('Loader')}

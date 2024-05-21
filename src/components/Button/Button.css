@@ -123,7 +123,7 @@
             --button-font-color-outline-hover: var(--color-control-typo-neutral-hover);
             --button-font-color-outline-focus: var(--color-control-typo-neutral-hover);
             --button-bg-color-ouline-hover: var(--color-control-bg-neutral-disabled);
-            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-neutral-disabled) h s calc(l - 0.05));
+            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-neutral-disabled) h s calc(l - 5));
             --button-border-color: var(--color-control-border);
             --button-border-color-focus: var(--button-bg-color-ouline-focus);
             --button-border-color-disabled: var(--color-control-typo-neutral-disabled);
@@ -147,7 +147,7 @@
             --button-font-color-outline-hover: var(--color-control-bg-primary);
             --button-font-color-outline-focus: var(--color-control-bg-primary-focus);
             --button-bg-color-ouline-hover: var(--color-control-bg-primary-disabled);
-            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-primary-disabled) h s calc(l - 0.05));
+            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-primary-disabled) h s calc(l - 5));
             --button-border-color: var(--color-control-bg-primary);
             --button-border-color-focus: var(--color-control-bg-primary-focus);
             --button-border-color-disabled: var(--color-control-typo-primary-disabled);
@@ -171,7 +171,7 @@
             --button-font-color-outline-hover: var(--color-control-bg-accent);
             --button-font-color-outline-focus: var(--color-control-bg-accent-focus);
             --button-bg-color-ouline-hover: var(--color-control-bg-accent-disabled);
-            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-accent-disabled) h s calc(l - 0.05));
+            --button-bg-color-ouline-focus: hsl(from var(--color-control-bg-accent-disabled) h s calc(l - 5));
             --button-border-color: var(--color-control-bg-accent);
             --button-border-color-focus: var(--color-control-bg-accent-focus);
             --button-border-color-disabled: var(--color-control-typo-accent-disabled);
