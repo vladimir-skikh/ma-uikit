@@ -1,77 +1,169 @@
 .MaKitLoader {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2px;
     width: var(--loader-size);
     height: var(--loader-size);
     box-sizing: border-box;
-    animation: rotate 1s linear infinite;
-    transform-origin: center;
-
-    & path:first-child {
-        fill: var(--loader-color-small-line);
-    }
-    & path:last-child {
-        fill: var(--loader-color-big-line);
-    }
-
-    &__variant {
-        &_secondary {
-            & path:first-child {
-                fill: var(--loader-color-big-line);
-            }
-            & path:last-child {
-                fill: var(--loader-color-small-line);
-            }
-        }
-    }
+    z-index: 2;
 
     &__size {
         &_xs {
             --loader-size: var(--ma-space-12);
         }
         &_s {
-            --loader-size: var(--ma-space-16);
-        }
-        &_m {
-            --loader-size: var(--ma-space-20);
-        }
-        &_l {
             --loader-size: var(--ma-space-24);
         }
-        &_xl {
-            --loader-size: var(--ma-space-32);
+        &_m {
+            --loader-size: 36px;
+        }
+        &_l {
+            --loader-size: var(--ma-space-48);
         }
     }
 
     &__view {
         &_primary {
-            --loader-color-small-line: var(--color-bg-brand);
-            --loader-color-big-line: var(--color-bg-brand-secondary);
+            --loader-circle-color-inactive: var(--color-control-typo-primary-disabled);
+            --loader-circle-color-active: var(--color-control-bg-primary);
+
+            --loader-circle-color-inactive-secondary: var(--color-control-typo-primary-disabled);
+            --loader-circle-color-active-secondary: var(--color-control-bg-primary-disabled);
         }
 
         &_accent {
-            --loader-color-small-line: var(--color-bg-accent);
-            --loader-color-big-line: var(--color-bg-accent-secondary);
+            --loader-circle-color-inactive: var(--color-control-typo-accent-disabled);
+            --loader-circle-color-active: var(--color-control-bg-accent);
+
+            --loader-circle-color-inactive-secondary: var(--color-control-typo-accent-disabled);
+            --loader-circle-color-active-secondary: var(--color-control-bg-accent-disabled);
         }
 
         &_neutral {
-            --loader-color-small-line: var(--color-bg-neutral);
-            --loader-color-big-line: var(--color-base-stroke);
-        }
+            --loader-circle-color-inactive: var(--color-control-typo-neutral-disabled);
+            --loader-circle-color-active: var(--color-control-typo-neutral);
 
+            --loader-circle-color-inactive-secondary: var(--color-control-typo-neutral-disabled);
+            --loader-circle-color-active-secondary: var(--color-control-bg-neutral);
+        }
     }
 
-    &--Svg {
-        display: block;
-        width: 100%;
-        height: 100%;
+    &__variant {
+        &_secondary {
+            --loader-circle-color-inactive: var(--loader-circle-color-inactive-secondary);
+            --loader-circle-color-active: var(--loader-circle-color-active-secondary);
+        }
+    }
+
+    &--Circle {
+        --circle-size-inactive: calc(var(--loader-size) / 6);
+        --circle-size-active: calc(var(--loader-size) / 3);
+
+        width: var(--circle-size-inactive);
+        height: var(--circle-size-inactive);
+        border-radius: var(--ma-radius-full);
+
+        &__position {
+            &_left {
+                transform-origin: center left;
+                background-color: var(--loader-circle-color-inactive);
+                animation: circle-left 2.4s ease-in-out infinite;
+            }
+            &_center {
+                transform-origin: center left;
+                width: var(--circle-size-active);
+                height: var(--circle-size-active);
+                background-color: var(--loader-circle-color-active);
+                animation: circle-center 2.4s ease-in-out infinite;
+            }
+            &_right {
+                transform-origin: center left;
+                background-color: var(--loader-circle-color-inactive);
+                animation: circle-right 2.4s ease-in-out infinite;
+            }
+        }
     }
 }
 
-@keyframes rotate {
+@keyframes circle-left {
     0% {
-        transform: rotate(0deg);
+        transform:
+                scale(1)
+                translateX(0);
+        background-color: var(--loader-circle-color-inactive);
+    }
+    33% {
+        transform:
+                translateX(200%)
+                scale(2);
+        background-color: var(--loader-circle-color-active);
+    }
+    66% {
+        transform:
+                translateX(500%)
+                scale(1);
+        background-color: var(--loader-circle-color-inactive);
     }
     100% {
-        transform: rotate(359deg);
+        transform:
+                translateX(0)
+                scale(1);
+    }
+}
+
+@keyframes circle-center {
+    0% {
+        transform:
+                translateX(0)
+                scale(1);
+        background-color: var(--loader-circle-color-active);
+    }
+    33% {
+        transform:
+                translateX(150%)
+                scale(0.5);
+        background-color: var(--loader-circle-color-inactive);
+    }
+    66% {
+        z-index: -1;
+        transform:
+                translateX(-100%)
+                scale(0.5);
+        background-color: var(--loader-circle-color-inactive);
+    }
+    100% {
+        z-index: 1;
+        transform: scale(1);
+        background-color: var(--loader-circle-color-active);
+    }
+}
+
+@keyframes circle-right {
+    0% {
+        z-index: -1;
+        transform:
+                translateX(0)
+                scale(1);
+        background-color: var(--loader-circle-color-inactive);
+    }
+    33% {
+        transform:
+                translateX(-500%)
+                scale(1);
+        background-color: var(--loader-circle-color-inactive);
+    }
+    66% {
+        transform:
+                translateX(-300%)
+                scale(2);
+        background-color: var(--loader-circle-color-active);
+    }
+    100% {
+        z-index: 1;
+        transform:
+                translateX(0)
+                scale(1);
+        background-color: var(--loader-circle-color-inactive);
     }
 }
