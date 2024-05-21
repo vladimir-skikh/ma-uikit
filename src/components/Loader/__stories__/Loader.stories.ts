@@ -15,7 +15,7 @@ type Story = StoryObj<typeof LoaderComponent>;
 
 export const Loader: Story = {
     args: {
-        size: 'xl',
+        size: 'l',
         view: 'primary',
         variant: 'primary',
     }
