@@ -1,0 +1,233 @@
+import { Meta, ColorPalette, ColorItem, Subheading } from '@storybook/blocks';
+import { Theme } from "../../components/Theme";
+
+<Meta title="Theme/Colors" />
+
+<Theme>
+  <ColorPalette>
+    <Subheading>
+      Базовые цвета
+    </Subheading>
+    <ColorItem
+      title="Base"
+      subtitle="Gray scale"
+      colors={{
+        '--color-base-base': 'var(--ma-color-neutral-900)',
+        '--color-base-essential': 'var(--ma-color-neutral-0)',
+        '--color-base-stroke': 'var(--ma-color-neutral-100)',
+        '--color-base-shadow': 'var(--ma-color-neutral-600)',
+    }}
+    />
+    <ColorItem
+      title="Base"
+      subtitle="Colorfull"
+      colors={{
+        '--color-base-primary': 'var(--ma-color-primary-500)',
+        '--color-base-accent': 'var(--ma-color-accent-500)',
+        '--color-base-neutral': 'var(--ma-color-neutral-50)',
+        '--color-base-link': 'var(--ma-color-link-500)',
+        '--color-base-success': 'var(--ma-color-success-500)',
+        '--color-base-warning': 'var(--ma-color-warning-500)',
+        '--color-base-error': 'var(--ma-color-error-500)',
+      }}
+    />
+    <Subheading>
+      Цвета фонов
+    </Subheading>
+    <ColorItem
+      title="Background"
+      subtitle="Default"
+      colors={{
+        'Default': 'var(--color-bg-default)',
+        'Default secondary': 'var(--color-bg-secondary)',
+      }}
+    />
+    <ColorItem
+      title="Background"
+      subtitle="Brand"
+      colors={{
+        'Brand': 'var(--color-bg-brand)',
+        'Brand secondary': 'var(--color-bg-brand-secondary)',
+      }}
+    />
+    <ColorItem
+      title="Background"
+      subtitle="Accent"
+      colors={{
+        'Accent': 'var(--color-bg-accent)',
+        'Accent secondary': 'var(--color-bg-accent-secondary)',
+      }}
+    />
+    <ColorItem
+      title="Background"
+      subtitle="Neutral"
+      colors={{
+        'Neutral': 'var(--color-bg-neutral)',
+        'Neutral secondary': 'var(--color-bg-neutral-secondary)',
+      }}
+    />
+    <ColorItem
+      title="Background"
+      subtitle="Success"
+      colors={{
+        'Success': 'var(--color-bg-success)',
+        'Success secondary': 'var(--color-bg-success-secondary)',
+      }}
+    />
+    <ColorItem
+      title="Background"
+      subtitle="Warning"
+      colors={{
+        'Warning': 'var(--color-bg-warning)',
+        'Warning secondary': 'var(--color-bg-warning-secondary)',
+      }}
+    />
+    <ColorItem
+      title="Background"
+      subtitle="Error"
+      colors={{
+        'Error': 'var(--color-bg-error)',
+        'Error secondary': 'var(--color-bg-error-secondary)',
+      }}
+    />
+    <Subheading>
+      Цвета текста
+    </Subheading>
+    <ColorItem
+      title="Typo"
+      subtitle="Gray scale"
+      colors={{
+        'Primary': 'var(--color-typo-primary)',
+        'Secondary': 'var(--color-typo-secondary)',
+        'Ghost': 'var(--color-typo-ghost)',
+        'Disabled': 'var(--color-typo-disabled)',
+        'Clear': 'var(--color-typo-clear)',
+      }}
+    />
+    <ColorItem
+      title="Typo"
+      subtitle="Colorfull"
+      colors={{
+        'Brand': 'var(--color-typo-brand)',
+        'Success': 'var(--color-typo-success)',
+        'Warning': 'var(--color-typo-warning)',
+        'Error': 'var(--color-typo-error)',
+      }}
+    />
+    <ColorItem
+      title="Typo"
+      subtitle="Link"
+      colors={{
+        'Link': 'var(--color-typo-link)',
+        'Link hover': 'var(--color-typo-link-hover)',
+      }}
+    />
+    <Subheading>
+      Цвета скроллбара
+    </Subheading>
+    <ColorItem
+      title="Scrollbar"
+      colors={{
+        'Scroll background': 'var(--color-scroll-bg)',
+        'Scroll thumb': 'var(--color-scroll-thumb)',
+        'Scroll thumb hover': 'var(--color-scroll-thumb-hover)',
+      }}
+    />
+    <Subheading>
+      Базовые цвета контролов
+    </Subheading>
+    <ColorItem
+      title="Control"
+      subtitle="Background"
+      colors={{
+        'Background': 'var(--color-control-bg)',
+        'Background disabled': 'var(--color-control-bg-disabled)',
+      }}
+    />
+    <ColorItem
+      title="Control"
+      subtitle="Border"
+      colors={{
+        'Border': 'var(--color-control-border)',
+        'Border hover': 'var(--color-control-border-hover)',
+        'Border focus': 'var(--color-control-border-focus)',
+      }}
+    />
+    <ColorItem
+      title="Control"
+      subtitle="Typo"
+      colors={{
+        'Typo default': 'var(--color-control-typo-default)',
+        'Typo label': 'var(--color-control-typo-label)',
+        'Typo placeholder': 'var(--color-control-typo-placeholder)',
+        'Typo hint': 'var(--color-control-typo-hint)',
+      }}
+    />
+    <Subheading>
+      Цвета контроллов типа Primary
+    </Subheading>
+    <ColorItem
+      title="Control Primary"
+      subtitle="Background"
+      colors={{
+        'Background': 'var(--color-control-bg-primary)',
+        'Background hover': 'var(--color-control-bg-primary-hover)',
+        'Background focus': 'var(--color-control-bg-primary-focus)',
+        'Background disabled': 'var(--color-control-bg-primary-disabled)',
+      }}
+    />
+    <ColorItem
+      title="Control Primary"
+      subtitle="Typo"
+      colors={{
+        'Typo': 'var(--color-control-typo-primary)',
+        'Typo hover': 'var(--color-control-typo-primary-hover)',
+        'Typo disabled': 'var(--color-control-typo-primary-disabled)',
+      }}
+    />
+    <Subheading>
+      Цвета контроллов типа Accent
+    </Subheading>
+    <ColorItem
+      title="Control Accent"
+      subtitle="Background"
+      colors={{
+        'Background': 'var(--color-control-bg-accent)',
+        'Background hover': 'var(--color-control-bg-accent-hover)',
+        'Background focus': 'var(--color-control-bg-accent-focus)',
+        'Background disabled': 'var(--color-control-bg-accent-disabled)',
+      }}
+    />
+    <ColorItem
+      title="Control Accent"
+      subtitle="Typo"
+      colors={{
+        'Typo': 'var(--color-control-typo-accent)',
+        'Typo hover': 'var(--color-control-typo-accent-hover)',
+        'Typo disabled': 'var(--color-control-typo-accent-disabled)',
+      }}
+    />
+    <Subheading>
+      Цвета контроллов типа Neutral
+    </Subheading>
+    <ColorItem
+      title="Control Neutral"
+      subtitle="Background"
+      colors={{
+        'Background': 'var(--color-control-bg-neutral)',
+        'Background hover': 'var(--color-control-bg-neutral-hover)',
+        'Background focus': 'var(--color-control-bg-neutral-focus)',
+        'Background disabled': 'var(--color-control-bg-neutral-disabled)',
+      }}
+    />
+    <ColorItem
+      title="Control Neutral"
+      subtitle="Typo"
+      colors={{
+        'Typo': 'var(--color-control-typo-neutral)',
+        'Typo hover': 'var(--color-control-typo-neutral-hover)',
+        'Typo disabled': 'var(--color-control-typo-neutral-disabled)',
+      }}
+    />
+  </ColorPalette>
+</Theme>
